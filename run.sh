@@ -15,14 +15,14 @@ fi
 echo "Checking port 1194/udp on ufw"
 if ! sudo ufw status | grep -qw 1194$; then
         echo "Port 1194/udp is not added, adding port 1194/udp"
-        yes y | sudo ufw allow 1194/udp
+        sudo ufw allow 1194/udp
 fi
 echo "Port 1194/udp allowed"
 
 echo "Checking ufw status"
 if sudo ufw status | grep -qw inactive$; then
         echo "ufw is inactive, enabling ufw"
-        sudo ufw enable
+        yes y | sudo ufw enable
 fi
 echo "ufw is active"
 
