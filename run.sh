@@ -33,4 +33,4 @@ sudo ufw disable
 sudo docker container rm -f brinxai_relay
 
 # Create and run brinx container
-sudo docker run -d --restart --name brinxai_relay --cap-add=NET_ADMIN -p 1194:1194/udp -it --privileged admier/brinxai_nodes-relay:latest
+sudo docker run -d --restart always --name brinxai_relay --cap-add=NET_ADMIN -p 1194:1194/udp -it --privileged admier/brinxai_nodes-relay:latest
